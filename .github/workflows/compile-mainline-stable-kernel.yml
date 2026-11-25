@@ -229,7 +229,7 @@ jobs:
         if: ${{ env.PACKAGED_STATUS == 'success' && !cancelled() }}
         with:
           tag: kernel_stable
-          artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
+          artifacts: "${{ env.PACKAGED_OUTPUTPATH }}/[0-9]*.tar.gz"
           allow_updates: true
           remove_artifacts: false
           replaces_artifacts: true
